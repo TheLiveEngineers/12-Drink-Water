@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --border-color: #006d77;
+    --fill-color: #83c5be;
+    --bg-greadient: linear-gradient(135deg, #edf6f9, #006d77);
+    --font-color: #fff;
+    --shadow-color: rgba(0,0,0,0.2);
+}
+
+body{
+    font-family: cursive;
+    background: var(--bg-greadient);
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px var(--shadow-color);
+    animation: fadeIn 1s ease;
+}
+
+h3{
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px var(--shadow-color);
+}
+
+.cup{
+    background: linear-gradient(to top, #ffffff, #cdeff7);
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 0 0 40px 40px;
+    height: 300px;
+    width: 120px;
+    display: flex;
+    margin: 20px 0;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    box-sizing: 0 4px 15px var(--shadow-color);
+}
+
+.small-cup{
+    height: 80px;
+    width: 40px;
+    border-radius: 0 0 15px 15px;
+    color: green;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow:  0px 2px 5px var(--shadow-color);
+}
+
+.small-cup.full{
+    background-color: var(--fill-color);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.cups{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 240px;
+}
+
+.remained{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: 0.3s ease;
+    position: relative;
+    font-weight: bold;
+}
+
+.remained span{
+    font-size: 1.5rem;
+}
+
+.percentage{
+    background: linear-gradient(to bottom, #83c5be, #006d77);
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 0;
+    transition:  height 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    text-shadow: 1px 1px 2px var(--shadow-color);
+}
+
+.text{
+    margin: 10px 0;
+    font-size: 1.1rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
